@@ -33,4 +33,4 @@ if button == "ENTER" :
     difference_report.write(difference)
     difference_report.close()
 
-    print('Hi')
+    print('Hi2')
