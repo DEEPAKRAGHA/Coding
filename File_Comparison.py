@@ -32,3 +32,5 @@ if button == "ENTER" :
     difference_report=open(filename_output,'w')
     difference_report.write(difference)
     difference_report.close()
+
+    print('Hi')
