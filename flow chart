@@ -1,0 +1,19 @@
+import pandas as pd
+import numpy as np
+import networkx as nx
+import matplotlib.pyplot as plt
+
+# Build a dataframe with your connections
+df = pd.read_excel('C:/Users/91880/OneDrive/Desktop/XML Valid/TT.xlsx',skiprows=[1])
+print(df)
+df2 = pd.DataFrame({'from': df['Parent'].tolist(),
+                   'to': df['Segment'].tolist()})
+
+
+# Build your graph
+G = nx.from_pandas_edgelist(df2, 'from', 'to')
+# Make the graph
+nx.draw(G, with_labels=True, node_size=1500, alpha=0.3, arrows=True)
+plt.title("Directed")
+plt.show()
+
